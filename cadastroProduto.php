@@ -52,16 +52,16 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="/assets/img/undraw_logistics_x-4-dc.svg" >
+            <img src="/formsFelipe/assets/img/undraw_logistics_x-4-dc.svg" >
         </div>
         <div class="form">
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
                         <h1>CADASTRE UM PRODUTO</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -109,19 +109,19 @@
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="P" name="gender">
+                            <input type="radio" id="P" name="gender" value="PERECÍVEL">
                             <label for="P">PERECÍVEL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="naoP" name="gender">
+                            <input type="radio" id="naoP" name="gender" value="NÃO PERECÍVEL">
                             <label for="naoP">NÃO PERECÍVEL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="outros" name="gender">
+                            <input type="radio" id="outros" name="gender" value="OUTROS">
                             <label for="outros">OUTROS</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="nada" name="gender">
+                            <input type="radio" id="nada" name="gender" value="PREFIRO NÃO DIZER">
                             <label for="nada">PREFIRO NÃO DIZER</label>
                         </div>
                     </div>

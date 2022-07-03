@@ -52,16 +52,16 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="/assets/img/undraw_personal_file_re_5joy.svg" >
+            <img src="/formsFelipe/assets/img/undraw_personal_file_re_5joy.svg" >
         </div>
         <div class="form">
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
                         <h1>CADASTRE-SE FUNCIONÁRIO</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -368,19 +368,19 @@
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="feminino" name="gender">
+                            <input type="radio" id="feminino" name="gender" value="FEMININO">
                             <label for="feminino">FEMININO</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="masculino" name="gender">
+                            <input type="radio" id="masculino" name="gender" value="MASCULINO">
                             <label for="masculino">MASCULINO</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="outros" name="gender">
+                            <input type="radio" id="outros" name="gender" value="OUTROS">
                             <label for="outros">OUTROS</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="nada" name="gender">
+                            <input type="radio" id="nada" name="gender" value="PREFIRO NÃO DIZER">
                             <label for="nada">PREFIRO NÃO DIZER</label>
                         </div>
                     </div>
@@ -401,10 +401,11 @@
 	{
         $primeironm = $_POST['firstname'];
         $sobrenome = $_POST['lastname'];
-        $dataNasc = $_POST['dataa']
+        $dataNasc = $_POST['dataa'];
 		$cpf = $_POST['cpf'];
-		$endereco = $_POST['endereco'];
-        $cep = $_POST['cep']
+        $rg = $_POST['rg'];		
+        $endereco = $_POST['endereco'];
+        $cep = $_POST['cep'];
         $pais = $_POST['country'];
 		$tel = $_POST['tel'];
 		$email = $_POST['email'];
@@ -412,7 +413,7 @@
 		
 		$arquivo = fopen("cadastro/funcionarios.txt", "a+")or die("Não foi possivel abrir o arquivo!");
 		
-		$conteudo = "$primeironm, $sobrenome, $dataNasc, $cpf, $endereco, $cep, $pais, $tel, $email, $genero,
+		$conteudo = "$primeironm $sobrenome, $dataNasc, $cpf, $rg, $endereco, $cep, $pais, $tel, $email, $genero,
 ";
 
 		if(fwrite($arquivo, $conteudo))

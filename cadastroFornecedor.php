@@ -52,16 +52,16 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="/assets/img/undraw_product_iteration_kjok.svg" >
+            <img src="/formsFelipe/assets/img/undraw_product_iteration_kjok.svg" >
         </div>
         <div class="form">
-            <form action="#">
+            <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
                         <h1>CADASTRE-SE FORNECEDOR</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -368,19 +368,19 @@
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="transnacional" name="gender">
+                            <input type="radio" id="transnacional" name="gender" value="TRANSNACIONAL">
                             <label for="transnacional">TRANSNACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="multi" name="gender">
+                            <input type="radio" id="multi" name="gender" value="MULTINACIONAL">
                             <label for="multi">MULTINACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="nacional" name="gender">
+                            <input type="radio" id="nacional" name="gender" value="NACIONAL">
                             <label for="nacional">NACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="nada" name="gender">
+                            <input type="radio" id="nada" name="gender" value="OUTROS">
                             <label for="nada">PREFIRO NÃO DIZER</label>
                         </div>
                     </div>
@@ -413,7 +413,7 @@
 		
 		$arquivo = fopen("cadastro/fornecedor.txt", "a+")or die("Não foi possivel abrir o arquivo!");
 		
-		$conteudo = "$primeironm, $sobrenome, $cnpj, $empresa, $produto, $cep, $endereco, $pais, $tel, $email, $genero,
+		$conteudo = "$primeironm $sobrenome, $cnpj, $empresa, $produto, $cep, $endereco, $pais, $tel, $email, $genero,
 ";
 
 		if(fwrite($arquivo, $conteudo))
